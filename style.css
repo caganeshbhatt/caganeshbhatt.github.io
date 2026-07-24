@@ -52,11 +52,11 @@ nav a:hover, nav a:focus-visible, .header-contact:hover, .header-contact:focus-v
 .text-link { display: inline-flex; align-items: center; gap: 8px; color: rgba(255,253,248,.7); border-bottom: 1px solid rgba(255,255,255,.28); padding-bottom: 5px; font-size: 12px; transition: color .25s ease, border-color .25s ease; }
 .text-link:hover, .text-link:focus-visible { color: var(--brass-light); border-color: var(--brass); }
 
-.portrait-card { min-height: 580px; border: 1px solid rgba(215,184,115,.58); background: #0b1f30; box-shadow: 0 35px 90px rgba(0,0,0,.28); position: relative; overflow: hidden; }
+.portrait-card { width: 100%; min-width: 0; height: 620px; border: 1px solid rgba(215,184,115,.58); background: #0b1f30; box-shadow: 0 35px 90px rgba(0,0,0,.28); position: relative; overflow: hidden; }
 .portrait-card::before, .portrait-card::after { content: ""; position: absolute; z-index: 3; background: var(--brass); }
 .portrait-card::before { width: 34px; height: 1px; top: -1px; left: -1px; }
 .portrait-card::after { width: 1px; height: 34px; top: -1px; left: -1px; }
-.portrait-card img { width: 100%; height: 100%; min-height: 580px; display: block; object-fit: cover; object-position: center 30%; filter: saturate(.88) contrast(1.02); }
+.portrait-card img { width: 100%; max-width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 30%; filter: saturate(.88) contrast(1.02); }
 .portrait-card > .portrait-topline, .portrait-card > .portrait-caption { position: absolute; z-index: 2; left: 0; right: 0; }
 .portrait-card::selection { background: transparent; }
 .portrait-topline { top: 0; display: flex; justify-content: space-between; padding: 22px 24px 58px; background: linear-gradient(to bottom, rgba(7,28,44,.8), transparent); color: rgba(255,253,248,.68); font-size: 9px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
@@ -142,7 +142,7 @@ nav a:hover, nav a:focus-visible, .header-contact:hover, .header-contact:focus-v
   .site-header { grid-template-columns: 1fr auto; }
   .site-header nav { display: none; }
   .hero-grid { grid-template-columns: 1fr; padding-top: 85px; }
-  .portrait-card, .portrait-card img { min-height: 620px; }
+  .portrait-card { height: 640px; }
   .intro-grid, .case-heading, .journey-layout, .approach-heading, .contact-grid { grid-template-columns: 1fr; gap: 50px; }
   .case-card { grid-template-columns: 1fr; gap: 34px; }
   .journey-intro { position: static; }
@@ -162,7 +162,7 @@ nav a:hover, nav a:focus-visible, .header-contact:hover, .header-contact:focus-v
   .hero h1 { font-size: clamp(52px, 16vw, 72px); }
   .hero-intro { font-size: 16px; }
   .hero-actions { align-items: flex-start; flex-direction: column; }
-  .portrait-card, .portrait-card img { min-height: 500px; }
+  .portrait-card { height: 500px; }
   .portrait-topline { padding-inline: 18px; }
   .portrait-caption { padding: 90px 20px 20px; }
   .hero-foot { display: none; }
